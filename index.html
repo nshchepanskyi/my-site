@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Find & Book Perfect Stay</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20fill='%23000000'%20width='800px'%20height='800px'%20viewBox='0%20-32%20576%20576'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M560%2064c8.84%200%2016-7.16%2016-16V16c0-8.84-7.16-16-16-16H16C7.16%200%200%207.16%200%2016v32c0%208.84%207.16%2016%2016%2016h15.98v384H16c-8.84%200-16%207.16-16%2016v32c0%208.84%207.16%2016%2016%2016h240v-80c0-8.8%207.2-16%2016-16h32c8.8%200%2016%207.2%2016%2016v80h240c8.84%200%2016-7.16%2016-16v-32c0-8.84-7.16-16-16-16h-16V64h16zm-304%2044.8c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4zm0%2096c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4zm-128-96c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4zM179.2%20256h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8zM192%20384c0-53.02%2042.98-96%2096-96s96%2042.98%2096%2096H192zm256-140.8c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4zm0-96c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4z'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" aria-hidden="true">
+                    <path d="M560 64c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16H16C7.16 0 0 7.16 0 16v32c0 8.84 7.16 16 16 16h15.98v384H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h240v-80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v80h240c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16h-16V64h16zm-304 44.8c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm0 96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm-128-96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zM179.2 256h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8zM192 384c0-53.02 42.98-96 96-96s96 42.98 96 96H192zm256-140.8c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm0-96c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4z"/>
+                </svg>
+                Lumina
+            </div>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#rooms">Rooms</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about">How it works</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#testimonials">Reviews</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-text">Log in</button>
+                <button class="btn-icon" id="themeBtn" aria-label="Toggle dark mode">
+                    <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+                    </svg>
+                </button>
+                <button class="btn-primary btn-sm">Book Now</button>
+            </div>
+            <button id="burgerBtn" class="burger-menu" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <ul class="mobile-menu__list">
+            <li><a class="mobile-menu__link" href="#home">Home</a></li>
+            <li><a class="mobile-menu__link" href="#rooms">Rooms</a></li>
+            <li><a class="mobile-menu__link" href="#about">How it works</a></li>
+            <li><a class="mobile-menu__link" href="#testimonials">Reviews</a></li>
+            <li><a class="mobile-menu__link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu__footer">
+            <button class="btn-icon" id="themeBtnMobile" aria-label="Toggle dark mode">
+                <svg id="themeIconMobile" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+                </svg>
+            </button>
+            <span class="mobile-menu__theme-label">Toggle theme</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Book your stay effortless</span>
+                    <h1>Find & Book Perfect Stay</h1>
+                    <p class="hero-text">Uncover hidden luxury, breathtaking views, and unforgettable moments crafted for true explorers and comfort seekers.</p>
+                    <button class="btn-primary" id="searchBtn">Search Rooms</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image"></div>
+                </div>
+            </div>
+            <div class="search-card">
+                <div class="search-card__row">
+                    <div class="search-tab active" data-tab="location">Location</div>
+                    <div class="search-tab" data-tab="dates">Dates</div>
+                    <div class="search-tab" data-tab="guests">Guests</div>
+                </div>
+                <div class="search-card__body">
+                    <div class="search-card__panel search-card__panel--location active" id="panel-location">
+                        <div class="search-card__field">
+                            <label for="searchWhere">Where</label>
+                            <input type="text" id="searchWhere" placeholder="e.g. Maldives, Tokyo…">
+                        </div>
+                    </div>
+                    <div class="search-card__panel search-card__panel--dates" id="panel-dates">
+                        <div class="search-card__field">
+                            <label for="searchCheckin">Check-in</label>
+                            <input type="date" id="searchCheckin">
+                        </div>
+                        <div class="search-card__field">
+                            <label for="searchCheckout">Check-out</label>
+                            <input type="date" id="searchCheckout">
+                        </div>
+                    </div>
+                    <div class="search-card__panel search-card__panel--guests" id="panel-guests">
+                        <div class="search-card__field">
+                            <label for="searchGuests">Guests</label>
+                            <input type="number" id="searchGuests" min="1" max="20" placeholder="2">
+                        </div>
+                    </div>
+                    <button class="btn-primary btn-search" id="searchCardBtn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Steps -->
+        <section class="section section-process" id="about">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Process</span>
+                    <h2>Seamless Booking Experience</h2>
+                    <p class="section__subtitle">Everything you need to find, book, and enjoy your perfect stay, all in one modern platform.</p>
+                </div>
+                <div class="grid process-grid">
+                    <div class="card process-card">
+                        <div class="icon">1</div>
+                        <h3>Search Location</h3>
+                        <p>Enter your destination and dates to explore available premium properties.</p>
+                    </div>
+                    <div class="card process-card">
+                        <div class="icon">2</div>
+                        <h3>Choose Room</h3>
+                        <p>Filter by amenities, price, and reviews to find your perfect match.</p>
+                    </div>
+                    <div class="card process-card">
+                        <div class="icon">3</div>
+                        <h3>Book Instantly</h3>
+                        <p>Secure your reservation with our fast, encrypted checkout process.</p>
+                    </div>
+                    <div class="card process-card">
+                        <div class="icon">4</div>
+                        <h3>Enjoy Stay</h3>
+                        <p>Arrive, relax, and enjoy your meticulously curated accommodation.</p>
+                    </div>
+                </div>
+                <aside class="feature-row">
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M13 2L4.09 12.97H11L10 22L20.09 11H13L13 2Z"/>
+                            </svg>
+                        </div>
+                        <h4>Easy Booking</h4>
+                        <p>One-click reservation system</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M21.41 11.58L12.41 2.58C12.05 2.22 11.55 2 11 2H4C2.9 2 2 2.9 2 4V11C2 11.55 2.22 12.05 2.59 12.42L11.59 21.42C11.95 21.78 12.45 22 13 22C13.55 22 14.05 21.78 14.41 21.41L21.41 14.41C21.78 14.05 22 13.55 22 13C22 12.45 21.77 11.94 21.41 11.58ZM5.5 7C4.67 7 4 6.33 4 5.5C4 4.67 4.67 4 5.5 4C6.33 4 7 4.67 7 5.5C7 6.33 6.33 7 5.5 7Z"/>
+                            </svg>
+                        </div>
+                        <h4>Best Prices</h4>
+                        <p>Price match guarantee</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                            </svg>
+                        </div>
+                        <h4>Verified Hotels</h4>
+                        <p>Strict quality standards</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 1C7.03 1 3 5.03 3 10V17C3 18.1 3.9 19 5 19H6C7.1 19 8 18.1 8 17V13C8 11.9 7.1 11 6 11H5V10C5 6.13 8.13 3 12 3C15.87 3 19 6.13 19 10V11H18C16.9 11 16 11.9 16 13V17C16 18.1 16.9 19 18 19H19C20.1 19 21 18.1 21 17V10C21 5.03 16.97 1 12 1Z"/>
+                            </svg>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Always here to help you</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Benefits Showcase Section -->
+        <section class="section benefits-section">
+            <div class="container">
+                <div class="benefit-row">
+                    <div class="benefit-visual">
+                        <div class="benefit-image benefit-image--primary"></div>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Curated Luxury Stays</h3>
+                        <p>Every property in our collection is personally vetted to ensure exceptional quality, breathtaking views, and unforgettable experiences tailored for discerning travelers like you.</p>
+                    </div>
+                </div>
+                <div class="benefit-row benefit-row--reverse">
+                    <div class="benefit-visual">
+                        <div class="benefit-image benefit-image--secondary"></div>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Seamless Booking Experience</h3>
+                        <p>From instant confirmations to 24/7 concierge support, we take care of every detail so you can focus on what matters most – creating memories that last a lifetime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rooms Section -->
+        <section class="section bg-light" id="rooms">
+            <div class="container">
+                <div class="section__header section__header--space">
+                    <div>
+                        <span class="section__label">Featured</span>
+                        <h2>Trending Destinations</h2>
+                    </div>
+                    <a href="javascript:void(0)" class="view-link">View all properties →</a>
+                </div>
+                <div class="slider-container">
+                    <div class="slider" id="slider">
+                        <article class="room-card">
+                            <div class="room-image room-image--bali" role="img" aria-label="Grand Resort & Spa, Maldives"></div>
+                            <div class="room-card__body">
+                                <div class="room-card__top">
+                                    <h3>Grand Resort & Spa</h3>
+                                    <span class="rating">4.9</span>
+                                </div>
+                                <p class="room-card__subtitle">Maldives</p>
+                                <ul class="room-card__info">
+                                    <li>2 Beds</li>
+                                    <li>1 Bath</li>
+                                    <li>Free WiFi</li>
+                                </ul>
+                            </div>
+                            <div class="room-card__footer">
+                                <span class="price">$450</span>
+                                <span class="room-card__price-label">/ night</span>
+                            </div>
+                            <button class="btn-primary">Book Now</button>
+                        </article>
+                        <article class="room-card">
+                            <div class="room-image room-image--nyc" role="img" aria-label="Urban Loft Suites, New York"></div>
+                            <div class="room-card__body">
+                                <div class="room-card__top">
+                                    <h3>Urban Loft Suites</h3>
+                                    <span class="badge">Popular</span>
+                                </div>
+                                <p class="room-card__subtitle">New York</p>
+                                <ul class="room-card__info">
+                                    <li>1 Bed</li>
+                                    <li>1 Bath</li>
+                                    <li>Breakfast</li>
+                                </ul>
+                            </div>
+                            <div class="room-card__footer">
+                                <span class="price">$280</span>
+                                <span class="room-card__price-label">/ night</span>
+                            </div>
+                            <button class="btn-primary">Book Now</button>
+                        </article>
+                        <article class="room-card">
+                            <div class="room-image room-image--alps" role="img" aria-label="Alpine Retreat Villa, Swiss Alps"></div>
+                            <div class="room-card__body">
+                                <div class="room-card__top">
+                                    <h3>Alpine Retreat Villa</h3>
+                                    <span class="rating">5.0</span>
+                                </div>
+                                <p class="room-card__subtitle">Swiss Alps</p>
+                                <ul class="room-card__info">
+                                    <li>3 Beds</li>
+                                    <li>2 Baths</li>
+                                    <li>Fireplace</li>
+                                </ul>
+                            </div>
+                            <div class="room-card__footer">
+                                <span class="price">$620</span>
+                                <span class="room-card__price-label">/ night</span>
+                            </div>
+                            <button class="btn-primary">Book Now</button>
+                        </article>
+                        <article class="room-card">
+                            <div class="room-image room-image--tokyo" role="img" aria-label="Sakura Sky Penthouse, Tokyo"></div>
+                            <div class="room-card__body">
+                                <div class="room-card__top">
+                                    <h3>Sakura Sky Penthouse</h3>
+                                    <span class="badge">New</span>
+                                </div>
+                                <p class="room-card__subtitle">Tokyo</p>
+                                <ul class="room-card__info">
+                                    <li>2 Beds</li>
+                                    <li>2 Baths</li>
+                                    <li>City View</li>
+                                </ul>
+                            </div>
+                            <div class="room-card__footer">
+                                <span class="price">$390</span>
+                                <span class="room-card__price-label">/ night</span>
+                            </div>
+                            <button class="btn-primary">Book Now</button>
+                        </article>
+                    </div>
+                    <button class="slider-btn prev" id="sliderPrev" aria-label="Previous">❮</button>
+                    <button class="slider-btn next" id="sliderNext" aria-label="Next">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <div class="section__header">
+                    <h2>What our guests say</h2>
+                </div>
+                <div class="grid testimonials-grid">
+                    <article class="review testimonial-card">
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"The booking process was incredibly smooth. Found a hidden gem in Paris that wasn't listed anywhere else. The 24/7 support team was also highly responsive when I needed to change my dates."</p>
+                        <strong>Sarah Jenkins</strong>
+                        <span>Stayed in Paris, France</span>
+                    </article>
+                    <article class="review testimonial-card">
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"Best UI I've seen for a travel site. Clean, fast, and no hidden fees at checkout. The verified hotel tags gave me peace of mind for our family vacation to Bali."</p>
+                        <strong>Michael Chen</strong>
+                        <span>Stayed in Bali, Indonesia</span>
+                    </article>
+                    <article class="review testimonial-card">
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>"I travel for work constantly and Lumina has become my go-to. The instant booking feature saves me hours every week, and the quality of properties is consistently high."</p>
+                        <strong>David Ross</strong>
+                        <span>Stayed in London, UK</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta" id="contact">
+            <div class="container cta-inner">
+                <h2>Ready to Book Your Stay?</h2>
+                <p>Join thousands of travelers who use Lumina to find and book their perfect accommodations worldwide.</p>
+                <button class="btn-primary" id="ctaBtn">Get Started Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button class="modal__close" id="closeBtn" aria-label="Close">✕</button>
+            <h2 id="modalTitle">Book Your Stay</h2>
+            <div class="modal__timeout" id="modalTimeout" hidden>
+                <p class="modal__timeout-icon">⏱</p>
+                <p class="modal__timeout-msg">Your offer has expired.</p>
+                <button class="btn-primary" id="restartBtn">Start Again</button>
+            </div>
+            <form id="bookForm">
+                <div class="form__field">
+                    <label class="form__label" for="nameInput">Full Name</label>
+                    <input type="text" id="nameInput" placeholder="e.g. Jane Smith" required>
+                    <span class="form__error" id="nameError"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="emailInput">Email</label>
+                    <input type="email" id="emailInput" placeholder="you@example.com" required>
+                    <span class="form__error" id="emailError"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="phoneInput">Phone</label>
+                    <input type="tel" id="phoneInput" placeholder="+1 555 000 0000" required>
+                    <span class="form__error" id="phoneError"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="checkinInput">Check-in</label>
+                    <input type="date" id="checkinInput" required>
+                    <span class="form__error" id="checkinError"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="checkoutInput">Check-out</label>
+                    <input type="date" id="checkoutInput" required>
+                    <span class="form__error" id="checkoutError"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="guestsSelect">Guests</label>
+                    <select id="guestsSelect" required>
+                        <option value="">Select guests</option>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3+ Guests</option>
+                    </select>
+                    <span class="form__error" id="guestsError"></span>
+                </div>
+                <button type="submit" class="btn-primary" id="submitBtn">Book Now</button>
+            </form>
+            <p class="timer">Offer expires in: <span id="timer">10:00</span></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" aria-hidden="true" fill="white">
+                            <path d="M560 64c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16H16C7.16 0 0 7.16 0 16v32c0 8.84 7.16 16 16 16h15.98v384H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h240v-80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v80h240c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16h-16V64h16zm-304 44.8c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm0 96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm-128-96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zM179.2 256h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8zM192 384c0-53.02 42.98-96 96-96s96 42.98 96 96H192zm256-140.8c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm0-96c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4z"/>
+                        </svg>
+                        Lumina
+                    </div>
+                    <p class="footer-tagline">Find and book your perfect stay anywhere in the world.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul class="footer-col__list">
+                            <li><a href="#rooms">Rooms</a></li>
+                            <li><a href="#about">How it works</a></li>
+                            <li><a href="#testimonials">Reviews</a></li>
+                            <li><a href="#contact">Book Now</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>hello@lumina.travel</p>
+                    <p>+1 (800) 586-4620</p>
+                    <p>Mon–Fri, 9am–6pm EST</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social">
+                        <a href="javascript:void(0)" class="footer-social__link" aria-label="Twitter / X">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="footer-social__link" aria-label="LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="footer-social__link" aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lumina. All rights reserved.</p>
+                <a href="javascript:void(0)">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="cookie-bar" id="cookieBar" role="alert" aria-label="Cookie consent">
+        <p class="cookie-bar__text">We use cookies to enhance your experience. By continuing, you agree to our use of cookies.</p>
+        <button class="cookie-bar__btn" id="cookieAcceptBtn">Accept</button>
+    </div>
+
+    <button class="go-top" id="goTopBtn" aria-label="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
