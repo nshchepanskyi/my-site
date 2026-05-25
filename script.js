@@ -1,8 +1,8 @@
-// Helper to get elements by selector
+
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
-// Get all elements
+
 const elements = {
     header: $('#header'),
     burgerBtn: $('#burgerBtn'),
@@ -42,7 +42,7 @@ const elements = {
     toastContainer: $('#toastContainer')
 };
 
-// ====== DARK MODE ======
+
 const SUN_SVG = `<path d="M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7zm0-5a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 17a1 1 0 0 1 1 1v1a1 1 0 0 1-2 0v-1a1 1 0 0 1 1-1zm9-9a1 1 0 0 1 0 2h-1a1 1 0 0 1 0-2h1zM4 11a1 1 0 0 1 0 2H3a1 1 0 0 1 0-2h1zm14.657-5.657a1 1 0 0 1 0 1.414l-.707.707a1 1 0 0 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0zM7.05 16.95a1 1 0 0 1 0 1.414l-.707.707a1 1 0 0 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0zm11.314 1.414a1 1 0 0 1-1.414 0l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1 0 1.414zM7.05 7.05a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 0 1 6.343 4.93l.707.707a1 1 0 0 1 0 1.414z"/>`;
 const MOON_SVG = `<path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>`;
 
@@ -65,7 +65,7 @@ function toggleTheme() {
 elements.themeBtn.addEventListener('click', toggleTheme);
 elements.themeBtnMobile.addEventListener('click', toggleTheme);
 
-// ====== TOAST ======
+
 function showToast(message, type) {
     const toast = document.createElement('div');
     toast.className = 'toast toast--' + (type || 'info');
@@ -78,12 +78,12 @@ function showToast(message, type) {
     }, 3500);
 }
 
-// ====== STICKY HEADER ======
+
 window.addEventListener('scroll', function() {
     elements.header.style.boxShadow = window.scrollY > 50 ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none';
 });
 
-// ====== BURGER MENU ======
+
 elements.burgerBtn.addEventListener('click', function() {
     const isOpen = elements.mobileMenu.classList.toggle('active');
     elements.burgerBtn.setAttribute('aria-expanded', isOpen);
@@ -96,7 +96,7 @@ $$('.mobile-menu__link').forEach(function(link) {
     });
 });
 
-// ====== SEARCH CARD TABS ======
+
 elements.searchTabs.forEach(function(tab) {
     tab.addEventListener('click', function() {
         elements.searchTabs.forEach(function(t) { t.classList.remove('active'); });
@@ -108,7 +108,7 @@ elements.searchTabs.forEach(function(tab) {
     });
 });
 
-// Set today as minimum for search card check-in
+
 (function() {
     const today = new Date().toISOString().split('T')[0];
     const checkinEl = $('#searchCheckin');
@@ -121,14 +121,14 @@ elements.searchTabs.forEach(function(tab) {
     }
 })();
 
-// ====== SEARCH CARD BUTTON ======
+
 if (elements.searchCardBtn) {
     elements.searchCardBtn.addEventListener('click', function() {
         $('#rooms').scrollIntoView({ behavior: 'smooth' });
     });
 }
 
-// ====== MODAL ======
+
 function setTimedOut(expired) {
     elements.modalTimeout.hidden = !expired;
     elements.bookForm.hidden = expired;
@@ -185,7 +185,7 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && elements.modal.classList.contains('active')) closeModal();
 });
 
-// ====== FORM VALIDATION ======
+
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -286,7 +286,7 @@ elements.bookForm.addEventListener('submit', function(e) {
     showToast("Booking submitted! We'll be in touch shortly.", 'success');
 });
 
-// ====== SLIDER ======
+
 elements.sliderNext.addEventListener('click', function() {
     elements.slider.scrollBy({ left: elements.slider.firstElementChild.offsetWidth + 24, behavior: 'smooth' });
 });
@@ -295,7 +295,7 @@ elements.sliderPrev.addEventListener('click', function() {
     elements.slider.scrollBy({ left: -(elements.slider.firstElementChild.offsetWidth + 24), behavior: 'smooth' });
 });
 
-// ====== COUNTDOWN TIMER ======
+
 let timerInterval;
 
 function startTimer() {
@@ -321,7 +321,7 @@ function stopTimer() {
     clearInterval(timerInterval);
 }
 
-// ====== SCROLL ANIMATIONS ======
+
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -335,7 +335,7 @@ $$('.card, .review, .benefit-row').forEach(function(el) {
     observer.observe(el);
 });
 
-// ====== COOKIE BAR ======
+
 (function() {
     var cookieBar = $('#cookieBar');
     var acceptBtn = $('#cookieAcceptBtn');
@@ -348,7 +348,7 @@ $$('.card, .review, .benefit-row').forEach(function(el) {
     });
 })();
 
-// ====== GO TOP BUTTON ======
+
 (function() {
     var goTopBtn = $('#goTopBtn');
 

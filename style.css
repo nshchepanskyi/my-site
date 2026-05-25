@@ -1,4 +1,4 @@
-/* ====== SIMPLE CSS FOR BEGINNERS ====== */
+
 
 :root {
     --color-primary: #4a5eff;
@@ -62,14 +62,14 @@ button {
     cursor: pointer;
 }
 
-/* ====== CONTAINER ====== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-/* ====== HEADER ====== */
+
 .header {
     position: sticky;
     top: 0;
@@ -110,7 +110,7 @@ button {
     fill: var(--color-dark);
 }
 
-/* ====== NAV ====== */
+
 .nav {
     display: flex;
     gap: 30px;
@@ -192,7 +192,7 @@ button {
     font-size: 22px;
 }
 
-/* ====== MOBILE MENU ====== */
+
 .mobile-menu {
     display: none;
     position: fixed;
@@ -235,7 +235,7 @@ button {
     outline-offset: -2px;
 }
 
-/* ====== HERO ====== */
+
 .hero {
     background: linear-gradient(180deg, var(--color-hero-gradient, #e8eefc) 0%, var(--color-bg) 100%);
     padding: 140px 0 320px;
@@ -308,7 +308,7 @@ button {
     background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0));
 }
 
-/* ====== SEARCH CARD ====== */
+
 .search-card {
     position: absolute;
     left: 50%;
@@ -406,7 +406,7 @@ button {
     font-weight: 400;
 }
 
-/* hide panels that aren't active */
+
 .search-card__panel {
     display: contents;
 }
@@ -453,7 +453,7 @@ button {
     }
 }
 
-/* ====== SECTION ====== */
+
 .section {
     padding: 100px 0;
 }
@@ -468,14 +468,14 @@ button {
     background: var(--color-bg-light);
 }
 
-/* ====== GRID ====== */
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 36px;
 }
 
-/* ====== CARDS ====== */
+
 .card {
     background: var(--color-surface);
     padding: 36px;
@@ -505,7 +505,7 @@ button {
     font-size: 14px;
 }
 
-/* ====== PROCESS SECTION ====== */
+
 .section-process {
     padding-top: 140px;
 }
@@ -627,7 +627,7 @@ button {
     text-decoration: underline;
 }
 
-/* ====== BENEFITS SHOWCASE ====== */
+
 .benefits-section {
     padding: 100px 0;
 }
@@ -687,7 +687,7 @@ button {
     line-height: 1.8;
 }
 
-/* ====== ROOM CARDS ====== */
+
 .room-card {
     background: var(--color-surface);
     border-radius: var(--radius-card);
@@ -717,7 +717,7 @@ button {
 }
 
 .room-image--nyc {
-    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80');
+    background-image: url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
 
 .room-image--alps {
@@ -799,7 +799,7 @@ button {
     margin: 0 24px 24px;
 }
 
-/* ====== SLIDER ====== */
+
 .slider-container {
     position: relative;
     padding: 0 24px;
@@ -857,7 +857,7 @@ button {
     right: 16px;
 }
 
-/* ====== REVIEWS ====== */
+
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -893,7 +893,7 @@ button {
     font-size: 14px;
 }
 
-/* ====== CTA ====== */
+
 .cta {
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
     padding: 110px 0;
@@ -928,7 +928,7 @@ button {
     line-height: 1.7;
 }
 
-/* ====== BUTTONS ====== */
+
 .btn-primary {
     background: var(--color-primary);
     color: white;
@@ -956,7 +956,7 @@ button {
     border: none;
 }
 
-/* ====== FOCUS STATES ====== */
+
 .btn-primary:focus-visible,
 .btn-text:focus-visible,
 .slider-btn:focus-visible {
@@ -964,7 +964,7 @@ button {
     outline-offset: 3px;
 }
 
-/* ====== MODAL ====== */
+
 .modal {
     display: none;
     position: fixed;
@@ -1090,7 +1090,7 @@ button {
     font-weight: bold;
 }
 
-/* ====== FOOTER ====== */
+
 .footer {
     background: var(--color-darker);
     color: rgba(255, 255, 255, 0.82);
@@ -1201,7 +1201,7 @@ button {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ====== RESPONSIVE ====== */
+
 @media (max-width: 980px) {
     .hero-inner,
     .process-grid,
@@ -1355,7 +1355,7 @@ button {
     }
 }
 
-/* ====== DARK MODE OVERRIDES ====== */
+
 [data-theme="dark"] .mobile-menu__link {
     color: var(--color-body);
 }
@@ -1389,7 +1389,7 @@ button {
     color: var(--color-muted);
 }
 
-/* ====== MOBILE MENU FOOTER ====== */
+
 .mobile-menu__footer {
     display: flex;
     align-items: center;
@@ -1405,7 +1405,7 @@ button {
     color: var(--color-muted);
 }
 
-/* ====== MODAL TIMED OUT ====== */
+
 .modal__timeout {
     text-align: center;
     padding: 20px 0 10px;
@@ -1428,7 +1428,7 @@ button {
     font-weight: 700;
 }
 
-/* ====== TOAST ====== */
+
 .toast-container {
     position: fixed;
     bottom: 32px;
@@ -1473,7 +1473,7 @@ button {
     to   { opacity: 0; transform: translateY(16px); }
 }
 
-/* ====== COOKIE BAR ====== */
+
 .cookie-bar {
     position: fixed;
     bottom: 0;
@@ -1524,7 +1524,7 @@ button {
     outline-offset: 3px;
 }
 
-/* ====== GO TOP BUTTON ====== */
+
 .go-top {
     position: fixed;
     bottom: 32px;
