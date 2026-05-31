@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina - Find & Book Perfect Stay</title>
+    <title data-i18n="title">Lumina - Find & Book Perfect Stay</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20fill='%23000000'%20width='800px'%20height='800px'%20viewBox='0%20-32%20576%20576'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpath%20d='M560%2064c8.84%200%2016-7.16%2016-16V16c0-8.84-7.16-16-16-16H16C7.16%200%200%207.16%200%2016v32c0%208.84%207.16%2016%2016%2016h15.98v384H16c-8.84%200-16%207.16-16%2016v32c0%208.84%207.16%2016%2016%2016h240v-80c0-8.8%207.2-16%2016-16h32c8.8%200%2016%207.2%2016%2016v80h240c8.84%200%2016-7.16%2016-16v-32c0-8.84-7.16-16-16-16h-16V64h16zm-304%2044.8c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4zm0%2096c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4zm-128-96c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4zM179.2%20256h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4c0%206.4-6.4%2012.8-12.8%2012.8zM192%20384c0-53.02%2042.98-96%2096-96s96%2042.98%2096%2096H192zm256-140.8c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4zm0-96c0%206.4-6.4%2012.8-12.8%2012.8h-38.4c-6.4%200-12.8-6.4-12.8-12.8v-38.4c0-6.4%206.4-12.8%2012.8-12.8h38.4c6.4%200%2012.8%206.4%2012.8%2012.8v38.4z'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,21 +22,22 @@
             </div>
             <nav class="nav" id="nav" aria-label="Main navigation">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#rooms">Rooms</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#about">How it works</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#testimonials">Reviews</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#home"><span data-i18n="nav_home">Home</span></a></li>
+                    <li class="nav__item"><a class="nav__link" href="#rooms"><span data-i18n="nav_rooms">Rooms</span></a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about"><span data-i18n="nav_how">How it works</span></a></li>
+                    <li class="nav__item"><a class="nav__link" href="#testimonials"><span data-i18n="nav_reviews">Reviews</span></a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contact"><span data-i18n="nav_contact">Contact</span></a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="btn-text">Log in</button>
+                <button class="btn-text" data-i18n="login">Log in</button>
+                <button class="btn-lang" id="langBtn" aria-label="Switch to Ukrainian">UA</button>
                 <button class="btn-icon" id="themeBtn" aria-label="Toggle dark mode">
                     <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
                     </svg>
                 </button>
-                <button class="btn-primary btn-sm">Book Now</button>
+                <button class="btn-primary btn-sm" data-i18n="book_now">Book Now</button>
             </div>
             <button id="burgerBtn" class="burger-menu" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
@@ -45,19 +46,20 @@
     
     <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
         <ul class="mobile-menu__list">
-            <li><a class="mobile-menu__link" href="#home">Home</a></li>
-            <li><a class="mobile-menu__link" href="#rooms">Rooms</a></li>
-            <li><a class="mobile-menu__link" href="#about">How it works</a></li>
-            <li><a class="mobile-menu__link" href="#testimonials">Reviews</a></li>
-            <li><a class="mobile-menu__link" href="#contact">Contact</a></li>
+            <li><a class="mobile-menu__link" href="#home"><span data-i18n="nav_home">Home</span></a></li>
+            <li><a class="mobile-menu__link" href="#rooms"><span data-i18n="nav_rooms">Rooms</span></a></li>
+            <li><a class="mobile-menu__link" href="#about"><span data-i18n="nav_how">How it works</span></a></li>
+            <li><a class="mobile-menu__link" href="#testimonials"><span data-i18n="nav_reviews">Reviews</span></a></li>
+            <li><a class="mobile-menu__link" href="#contact"><span data-i18n="nav_contact">Contact</span></a></li>
         </ul>
         <div class="mobile-menu__footer">
+            <button class="btn-lang" id="langBtnMobile" aria-label="Switch to Ukrainian">UA</button>
             <button class="btn-icon" id="themeBtnMobile" aria-label="Toggle dark mode">
                 <svg id="themeIconMobile" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
                 </svg>
             </button>
-            <span class="mobile-menu__theme-label">Toggle theme</span>
+            <span class="mobile-menu__theme-label" data-i18n="toggle_theme">Toggle theme</span>
         </div>
     </nav>
 
@@ -67,10 +69,10 @@
         <section class="hero" id="home">
             <div class="container hero-inner">
                 <div class="hero-copy">
-                    <span class="eyebrow">Book your stay effortless</span>
-                    <h1>Find & Book Perfect Stay</h1>
-                    <p class="hero-text">Uncover hidden luxury, breathtaking views, and unforgettable moments crafted for true explorers and comfort seekers.</p>
-                    <button class="btn-primary" id="searchBtn">Search Rooms</button>
+                    <span class="eyebrow" data-i18n="hero_eyebrow">Book your stay effortless</span>
+                    <h1 data-i18n="hero_title">Find & Book Perfect Stay</h1>
+                    <p class="hero-text" data-i18n="hero_text">Uncover hidden luxury, breathtaking views, and unforgettable moments crafted for true explorers and comfort seekers.</p>
+                    <button class="btn-primary" id="searchBtn" data-i18n="search_rooms">Search Rooms</button>
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image"></div>
@@ -78,34 +80,34 @@
             </div>
             <div class="search-card">
                 <div class="search-card__row">
-                    <div class="search-tab active" data-tab="location">Location</div>
-                    <div class="search-tab" data-tab="dates">Dates</div>
-                    <div class="search-tab" data-tab="guests">Guests</div>
+                    <div class="search-tab active" data-tab="location" data-i18n="tab_location">Location</div>
+                    <div class="search-tab" data-tab="dates" data-i18n="tab_dates">Dates</div>
+                    <div class="search-tab" data-tab="guests" data-i18n="tab_guests">Guests</div>
                 </div>
                 <div class="search-card__body">
                     <div class="search-card__panel search-card__panel--location active" id="panel-location">
                         <div class="search-card__field">
-                            <label for="searchWhere">Where</label>
-                            <input type="text" id="searchWhere" placeholder="e.g. Maldives, Tokyo…">
+                            <label for="searchWhere" data-i18n="search_where">Where</label>
+                            <input type="text" id="searchWhere" data-i18n-placeholder="search_where_pl" placeholder="e.g. Maldives, Tokyo…">
                         </div>
                     </div>
                     <div class="search-card__panel search-card__panel--dates" id="panel-dates">
                         <div class="search-card__field">
-                            <label for="searchCheckin">Check-in</label>
+                            <label for="searchCheckin" data-i18n="checkin">Check-in</label>
                             <input type="date" id="searchCheckin">
                         </div>
                         <div class="search-card__field">
-                            <label for="searchCheckout">Check-out</label>
+                            <label for="searchCheckout" data-i18n="checkout">Check-out</label>
                             <input type="date" id="searchCheckout">
                         </div>
                     </div>
                     <div class="search-card__panel search-card__panel--guests" id="panel-guests">
                         <div class="search-card__field">
-                            <label for="searchGuests">Guests</label>
+                            <label for="searchGuests" data-i18n="guests">Guests</label>
                             <input type="number" id="searchGuests" min="1" max="20" placeholder="2">
                         </div>
                     </div>
-                    <button class="btn-primary btn-search" id="searchCardBtn">Search</button>
+                    <button class="btn-primary btn-search" id="searchCardBtn" data-i18n="search">Search</button>
                 </div>
             </div>
         </section>
@@ -114,30 +116,30 @@
         <section class="section section-process" id="about">
             <div class="container">
                 <div class="section__header">
-                    <span class="section__label">Process</span>
-                    <h2>Seamless Booking Experience</h2>
-                    <p class="section__subtitle">Everything you need to find, book, and enjoy your perfect stay, all in one modern platform.</p>
+                    <span class="section__label" data-i18n="process_label">Process</span>
+                    <h2 data-i18n="process_title">Seamless Booking Experience</h2>
+                    <p class="section__subtitle" data-i18n="process_sub">Everything you need to find, book, and enjoy your perfect stay, all in one modern platform.</p>
                 </div>
                 <div class="grid process-grid">
                     <div class="card process-card">
                         <div class="icon">1</div>
-                        <h3>Search Location</h3>
-                        <p>Enter your destination and dates to explore available premium properties.</p>
+                        <h3 data-i18n="proc1_title">Search Location</h3>
+                        <p data-i18n="proc1_desc">Enter your destination and dates to explore available premium properties.</p>
                     </div>
                     <div class="card process-card">
                         <div class="icon">2</div>
-                        <h3>Choose Room</h3>
-                        <p>Filter by amenities, price, and reviews to find your perfect match.</p>
+                        <h3 data-i18n="proc2_title">Choose Room</h3>
+                        <p data-i18n="proc2_desc">Filter by amenities, price, and reviews to find your perfect match.</p>
                     </div>
                     <div class="card process-card">
                         <div class="icon">3</div>
-                        <h3>Book Instantly</h3>
-                        <p>Secure your reservation with our fast, encrypted checkout process.</p>
+                        <h3 data-i18n="proc3_title">Book Instantly</h3>
+                        <p data-i18n="proc3_desc">Secure your reservation with our fast, encrypted checkout process.</p>
                     </div>
                     <div class="card process-card">
                         <div class="icon">4</div>
-                        <h3>Enjoy Stay</h3>
-                        <p>Arrive, relax, and enjoy your meticulously curated accommodation.</p>
+                        <h3 data-i18n="proc4_title">Enjoy Stay</h3>
+                        <p data-i18n="proc4_desc">Arrive, relax, and enjoy your meticulously curated accommodation.</p>
                     </div>
                 </div>
                 <aside class="feature-row">
@@ -147,8 +149,8 @@
                                 <path d="M13 2L4.09 12.97H11L10 22L20.09 11H13L13 2Z"/>
                             </svg>
                         </div>
-                        <h4>Easy Booking</h4>
-                        <p>One-click reservation system</p>
+                        <h4 data-i18n="feat1_title">Easy Booking</h4>
+                        <p data-i18n="feat1_desc">One-click reservation system</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon">
@@ -156,8 +158,8 @@
                                 <path d="M21.41 11.58L12.41 2.58C12.05 2.22 11.55 2 11 2H4C2.9 2 2 2.9 2 4V11C2 11.55 2.22 12.05 2.59 12.42L11.59 21.42C11.95 21.78 12.45 22 13 22C13.55 22 14.05 21.78 14.41 21.41L21.41 14.41C21.78 14.05 22 13.55 22 13C22 12.45 21.77 11.94 21.41 11.58ZM5.5 7C4.67 7 4 6.33 4 5.5C4 4.67 4.67 4 5.5 4C6.33 4 7 4.67 7 5.5C7 6.33 6.33 7 5.5 7Z"/>
                             </svg>
                         </div>
-                        <h4>Best Prices</h4>
-                        <p>Price match guarantee</p>
+                        <h4 data-i18n="feat2_title">Best Prices</h4>
+                        <p data-i18n="feat2_desc">Price match guarantee</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon">
@@ -165,8 +167,8 @@
                                 <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
                             </svg>
                         </div>
-                        <h4>Verified Hotels</h4>
-                        <p>Strict quality standards</p>
+                        <h4 data-i18n="feat3_title">Verified Hotels</h4>
+                        <p data-i18n="feat3_desc">Strict quality standards</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-card__icon">
@@ -174,8 +176,8 @@
                                 <path d="M12 1C7.03 1 3 5.03 3 10V17C3 18.1 3.9 19 5 19H6C7.1 19 8 18.1 8 17V13C8 11.9 7.1 11 6 11H5V10C5 6.13 8.13 3 12 3C15.87 3 19 6.13 19 10V11H18C16.9 11 16 11.9 16 13V17C16 18.1 16.9 19 18 19H19C20.1 19 21 18.1 21 17V10C21 5.03 16.97 1 12 1Z"/>
                             </svg>
                         </div>
-                        <h4>24/7 Support</h4>
-                        <p>Always here to help you</p>
+                        <h4 data-i18n="feat4_title">24/7 Support</h4>
+                        <p data-i18n="feat4_desc">Always here to help you</p>
                     </div>
                 </aside>
             </div>
@@ -189,8 +191,8 @@
                         <div class="benefit-image benefit-image--primary"></div>
                     </div>
                     <div class="benefit-content">
-                        <h3>Curated Luxury Stays</h3>
-                        <p>Every property in our collection is personally vetted to ensure exceptional quality, breathtaking views, and unforgettable experiences tailored for discerning travelers like you.</p>
+                        <h3 data-i18n="benefit1_title">Curated Luxury Stays</h3>
+                        <p data-i18n="benefit1_desc">Every property in our collection is personally vetted to ensure exceptional quality, breathtaking views, and unforgettable experiences tailored for discerning travelers like you.</p>
                     </div>
                 </div>
                 <div class="benefit-row benefit-row--reverse">
@@ -198,8 +200,8 @@
                         <div class="benefit-image benefit-image--secondary"></div>
                     </div>
                     <div class="benefit-content">
-                        <h3>Seamless Booking Experience</h3>
-                        <p>From instant confirmations to 24/7 concierge support, we take care of every detail so you can focus on what matters most – creating memories that last a lifetime.</p>
+                        <h3 data-i18n="benefit2_title">Seamless Booking Experience</h3>
+                        <p data-i18n="benefit2_desc">From instant confirmations to 24/7 concierge support, we take care of every detail so you can focus on what matters most – creating memories that last a lifetime.</p>
                     </div>
                 </div>
             </div>
@@ -210,92 +212,92 @@
             <div class="container">
                 <div class="section__header section__header--space">
                     <div>
-                        <span class="section__label">Featured</span>
-                        <h2>Trending Destinations</h2>
+                        <span class="section__label" data-i18n="featured_label">Featured</span>
+                        <h2 data-i18n="featured_title">Trending Destinations</h2>
                     </div>
-                    <a href="javascript:void(0)" class="view-link">View all properties →</a>
+                    <a href="javascript:void(0)" class="view-link" data-i18n="view_all">View all properties →</a>
                 </div>
                 <div class="slider-container">
                     <div class="slider" id="slider">
                         <article class="room-card">
-                            <div class="room-image room-image--bali" role="img" aria-label="Grand Resort & Spa, Maldives"></div>
+                            <div class="room-image room-image--bali" role="img" data-i18n-aria="room1_img" aria-label="Grand Resort & Spa, Maldives"></div>
                             <div class="room-card__body">
                                 <div class="room-card__top">
-                                    <h3>Grand Resort & Spa</h3>
+                                    <h3 data-i18n="room1_name">Grand Resort & Spa</h3>
                                     <span class="rating">4.9</span>
                                 </div>
-                                <p class="room-card__subtitle">Maldives</p>
+                                <p class="room-card__subtitle" data-i18n="room1_loc">Maldives</p>
                                 <ul class="room-card__info">
-                                    <li>2 Beds</li>
-                                    <li>1 Bath</li>
-                                    <li>Free WiFi</li>
+                                    <li data-i18n="room1_beds">2 Beds</li>
+                                    <li data-i18n="room1_bath">1 Bath</li>
+                                    <li data-i18n="room1_wifi">Free WiFi</li>
                                 </ul>
                             </div>
                             <div class="room-card__footer">
                                 <span class="price">$450</span>
-                                <span class="room-card__price-label">/ night</span>
+                                <span class="room-card__price-label" data-i18n="per_night">/ night</span>
                             </div>
-                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-primary" data-i18n="book_now">Book Now</button>
                         </article>
                         <article class="room-card">
-                            <div class="room-image room-image--nyc" role="img" aria-label="Urban Loft Suites, New York"></div>
+                            <div class="room-image room-image--nyc" role="img" data-i18n-aria="room2_img" aria-label="Urban Loft Suites, New York"></div>
                             <div class="room-card__body">
                                 <div class="room-card__top">
-                                    <h3>Urban Loft Suites</h3>
-                                    <span class="badge">Popular</span>
+                                    <h3 data-i18n="room2_name">Urban Loft Suites</h3>
+                                    <span class="badge" data-i18n="badge_popular">Popular</span>
                                 </div>
-                                <p class="room-card__subtitle">New York</p>
+                                <p class="room-card__subtitle" data-i18n="room2_loc">New York</p>
                                 <ul class="room-card__info">
-                                    <li>1 Bed</li>
-                                    <li>1 Bath</li>
-                                    <li>Breakfast</li>
+                                    <li data-i18n="room2_beds">1 Bed</li>
+                                    <li data-i18n="room2_bath">1 Bath</li>
+                                    <li data-i18n="room2_breakfast">Breakfast</li>
                                 </ul>
                             </div>
                             <div class="room-card__footer">
                                 <span class="price">$280</span>
-                                <span class="room-card__price-label">/ night</span>
+                                <span class="room-card__price-label" data-i18n="per_night">/ night</span>
                             </div>
-                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-primary" data-i18n="book_now">Book Now</button>
                         </article>
                         <article class="room-card">
-                            <div class="room-image room-image--alps" role="img" aria-label="Alpine Retreat Villa, Swiss Alps"></div>
+                            <div class="room-image room-image--alps" role="img" data-i18n-aria="room3_img" aria-label="Alpine Retreat Villa, Swiss Alps"></div>
                             <div class="room-card__body">
                                 <div class="room-card__top">
-                                    <h3>Alpine Retreat Villa</h3>
+                                    <h3 data-i18n="room3_name">Alpine Retreat Villa</h3>
                                     <span class="rating">5.0</span>
                                 </div>
-                                <p class="room-card__subtitle">Swiss Alps</p>
+                                <p class="room-card__subtitle" data-i18n="room3_loc">Swiss Alps</p>
                                 <ul class="room-card__info">
-                                    <li>3 Beds</li>
-                                    <li>2 Baths</li>
-                                    <li>Fireplace</li>
+                                    <li data-i18n="room3_beds">3 Beds</li>
+                                    <li data-i18n="room3_bath">2 Baths</li>
+                                    <li data-i18n="room3_fireplace">Fireplace</li>
                                 </ul>
                             </div>
                             <div class="room-card__footer">
                                 <span class="price">$620</span>
-                                <span class="room-card__price-label">/ night</span>
+                                <span class="room-card__price-label" data-i18n="per_night">/ night</span>
                             </div>
-                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-primary" data-i18n="book_now">Book Now</button>
                         </article>
                         <article class="room-card">
-                            <div class="room-image room-image--tokyo" role="img" aria-label="Sakura Sky Penthouse, Tokyo"></div>
+                            <div class="room-image room-image--tokyo" role="img" data-i18n-aria="room4_img" aria-label="Sakura Sky Penthouse, Tokyo"></div>
                             <div class="room-card__body">
                                 <div class="room-card__top">
-                                    <h3>Sakura Sky Penthouse</h3>
-                                    <span class="badge">New</span>
+                                    <h3 data-i18n="room4_name">Sakura Sky Penthouse</h3>
+                                    <span class="badge" data-i18n="badge_new">New</span>
                                 </div>
-                                <p class="room-card__subtitle">Tokyo</p>
+                                <p class="room-card__subtitle" data-i18n="room4_loc">Tokyo</p>
                                 <ul class="room-card__info">
-                                    <li>2 Beds</li>
-                                    <li>2 Baths</li>
-                                    <li>City View</li>
+                                    <li data-i18n="room4_beds">2 Beds</li>
+                                    <li data-i18n="room4_bath">2 Baths</li>
+                                    <li data-i18n="room4_view">City View</li>
                                 </ul>
                             </div>
                             <div class="room-card__footer">
                                 <span class="price">$390</span>
-                                <span class="room-card__price-label">/ night</span>
+                                <span class="room-card__price-label" data-i18n="per_night">/ night</span>
                             </div>
-                            <button class="btn-primary">Book Now</button>
+                            <button class="btn-primary" data-i18n="book_now">Book Now</button>
                         </article>
                     </div>
                     <button class="slider-btn prev" id="sliderPrev" aria-label="Previous">❮</button>
@@ -308,26 +310,26 @@
         <section class="section testimonials" id="testimonials">
             <div class="container">
                 <div class="section__header">
-                    <h2>What our guests say</h2>
+                    <h2 data-i18n="testimonials_title">What our guests say</h2>
                 </div>
                 <div class="grid testimonials-grid">
                     <article class="review testimonial-card">
                         <p>⭐⭐⭐⭐⭐</p>
-                        <p>"The booking process was incredibly smooth. Found a hidden gem in Paris that wasn't listed anywhere else. The 24/7 support team was also highly responsive when I needed to change my dates."</p>
-                        <strong>Sarah Jenkins</strong>
-                        <span>Stayed in Paris, France</span>
+                        <p data-i18n="testimonial1_text">"The booking process was incredibly smooth. Found a hidden gem in Paris that wasn't listed anywhere else. The 24/7 support team was also highly responsive when I needed to change my dates."</p>
+                        <strong data-i18n="testimonial1_name">Sarah Jenkins</strong>
+                        <span data-i18n="testimonial1_place">Stayed in Paris, France</span>
                     </article>
                     <article class="review testimonial-card">
                         <p>⭐⭐⭐⭐⭐</p>
-                        <p>"Best UI I've seen for a travel site. Clean, fast, and no hidden fees at checkout. The verified hotel tags gave me peace of mind for our family vacation to Bali."</p>
-                        <strong>Michael Chen</strong>
-                        <span>Stayed in Bali, Indonesia</span>
+                        <p data-i18n="testimonial2_text">"Best UI I've seen for a travel site. Clean, fast, and no hidden fees at checkout. The verified hotel tags gave me peace of mind for our family vacation to Bali."</p>
+                        <strong data-i18n="testimonial2_name">Michael Chen</strong>
+                        <span data-i18n="testimonial2_place">Stayed in Bali, Indonesia</span>
                     </article>
                     <article class="review testimonial-card">
                         <p>⭐⭐⭐⭐⭐</p>
-                        <p>"I travel for work constantly and Lumina has become my go-to. The instant booking feature saves me hours every week, and the quality of properties is consistently high."</p>
-                        <strong>David Ross</strong>
-                        <span>Stayed in London, UK</span>
+                        <p data-i18n="testimonial3_text">"I travel for work constantly and Lumina has become my go-to. The instant booking feature saves me hours every week, and the quality of properties is consistently high."</p>
+                        <strong data-i18n="testimonial3_name">David Ross</strong>
+                        <span data-i18n="testimonial3_place">Stayed in London, UK</span>
                     </article>
                 </div>
             </div>
@@ -336,9 +338,9 @@
         
         <section class="cta" id="contact">
             <div class="container cta-inner">
-                <h2>Ready to Book Your Stay?</h2>
-                <p>Join thousands of travelers who use Lumina to find and book their perfect accommodations worldwide.</p>
-                <button class="btn-primary" id="ctaBtn">Get Started Now</button>
+                <h2 data-i18n="cta_title">Ready to Book Your Stay?</h2>
+                <p data-i18n="cta_text">Join thousands of travelers who use Lumina to find and book their perfect accommodations worldwide.</p>
+                <button class="btn-primary" id="ctaBtn" data-i18n="cta_btn">Get Started Now</button>
             </div>
         </section>
     </main>
@@ -347,51 +349,51 @@
     <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <button class="modal__close" id="closeBtn" aria-label="Close">✕</button>
-            <h2 id="modalTitle">Book Your Stay</h2>
+            <h2 id="modalTitle" data-i18n="modal_title">Book Your Stay</h2>
             <div class="modal__timeout" id="modalTimeout" hidden>
                 <p class="modal__timeout-icon">⏱</p>
-                <p class="modal__timeout-msg">Your offer has expired.</p>
-                <button class="btn-primary" id="restartBtn">Start Again</button>
+                <p class="modal__timeout-msg" data-i18n="timeout_msg">Your offer has expired.</p>
+                <button class="btn-primary" id="restartBtn" data-i18n="start_again">Start Again</button>
             </div>
             <form id="bookForm">
                 <div class="form__field">
-                    <label class="form__label" for="nameInput">Full Name</label>
-                    <input type="text" id="nameInput" placeholder="e.g. Jane Smith" required>
+                    <label class="form__label" for="nameInput" data-i18n="form_name">Full Name</label>
+                    <input type="text" id="nameInput" data-i18n-placeholder="form_name_pl" placeholder="e.g. Jane Smith" required>
                     <span class="form__error" id="nameError"></span>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="emailInput">Email</label>
-                    <input type="email" id="emailInput" placeholder="you@example.com" required>
+                    <label class="form__label" for="emailInput" data-i18n="form_email">Email</label>
+                    <input type="email" id="emailInput" data-i18n-placeholder="form_email_pl" placeholder="you@example.com" required>
                     <span class="form__error" id="emailError"></span>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="phoneInput">Phone</label>
-                    <input type="tel" id="phoneInput" placeholder="+1 555 000 0000" required>
+                    <label class="form__label" for="phoneInput" data-i18n="form_phone">Phone</label>
+                    <input type="tel" id="phoneInput" data-i18n-placeholder="form_phone_pl" placeholder="+1 555 000 0000" required>
                     <span class="form__error" id="phoneError"></span>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="checkinInput">Check-in</label>
+                    <label class="form__label" for="checkinInput" data-i18n="form_checkin">Check-in</label>
                     <input type="date" id="checkinInput" required>
                     <span class="form__error" id="checkinError"></span>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="checkoutInput">Check-out</label>
+                    <label class="form__label" for="checkoutInput" data-i18n="form_checkout">Check-out</label>
                     <input type="date" id="checkoutInput" required>
                     <span class="form__error" id="checkoutError"></span>
                 </div>
                 <div class="form__field">
-                    <label class="form__label" for="guestsSelect">Guests</label>
+                    <label class="form__label" for="guestsSelect" data-i18n="form_guests">Guests</label>
                     <select id="guestsSelect" required>
-                        <option value="">Select guests</option>
-                        <option>1 Guest</option>
-                        <option>2 Guests</option>
-                        <option>3+ Guests</option>
+                        <option value="" data-i18n="form_select_guests">Select guests</option>
+                        <option data-i18n="form_1guest">1 Guest</option>
+                        <option data-i18n="form_2guests">2 Guests</option>
+                        <option data-i18n="form_3guests">3+ Guests</option>
                     </select>
                     <span class="form__error" id="guestsError"></span>
                 </div>
-                <button type="submit" class="btn-primary" id="submitBtn">Book Now</button>
+                <button type="submit" class="btn-primary" id="submitBtn" data-i18n="book_now">Book Now</button>
             </form>
-            <p class="timer">Offer expires in: <span id="timer">10:00</span></p>
+            <p class="timer"><span data-i18n="offer_expires">Offer expires in:</span> <span id="timer">10:00</span></p>
         </div>
     </div>
 
@@ -406,27 +408,27 @@
                         </svg>
                         Lumina
                     </div>
-                    <p class="footer-tagline">Find and book your perfect stay anywhere in the world.</p>
+                    <p class="footer-tagline" data-i18n="footer_tagline">Find and book your perfect stay anywhere in the world.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer_nav">Navigation</h4>
                     <nav aria-label="Footer navigation">
                         <ul class="footer-col__list">
-                            <li><a href="#rooms">Rooms</a></li>
-                            <li><a href="#about">How it works</a></li>
-                            <li><a href="#testimonials">Reviews</a></li>
-                            <li><a href="#contact">Book Now</a></li>
+                            <li><a href="#rooms"><span data-i18n="nav_rooms">Rooms</span></a></li>
+                            <li><a href="#about"><span data-i18n="nav_how">How it works</span></a></li>
+                            <li><a href="#testimonials"><span data-i18n="nav_reviews">Reviews</span></a></li>
+                            <li><a href="#contact"><span data-i18n="book_now">Book Now</span></a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4 data-i18n="footer_contact">Contact</h4>
                     <p>hello@lumina.travel</p>
                     <p>+1 (800) 586-4620</p>
                     <p>Mon–Fri, 9am–6pm EST</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h4 data-i18n="footer_follow">Follow Us</h4>
                     <div class="footer-social">
                         <a href="javascript:void(0)" class="footer-social__link" aria-label="Twitter / X">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -447,7 +449,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Lumina. All rights reserved.</p>
+                <p>&copy; 2025 <span data-i18n="brand">Lumina</span>. <span data-i18n="rights">All rights reserved.</span></p>
                 <a href="javascript:void(0)">Privacy Policy</a>
             </div>
         </div>
@@ -456,11 +458,11 @@
     <div class="toast-container" id="toastContainer"></div>
 
     <div class="cookie-bar" id="cookieBar" role="alert" aria-label="Cookie consent">
-        <p class="cookie-bar__text">We use cookies to enhance your experience. By continuing, you agree to our use of cookies.</p>
-        <button class="cookie-bar__btn" id="cookieAcceptBtn">Accept</button>
+        <p class="cookie-bar__text" data-i18n="cookie_text">We use cookies to enhance your experience. By continuing, you agree to our use of cookies.</p>
+        <button class="cookie-bar__btn" id="cookieAcceptBtn" data-i18n="cookie_accept">Accept</button>
     </div>
 
-    <button class="go-top" id="goTopBtn" aria-label="Scroll to top">
+    <button class="go-top" id="goTopBtn" data-i18n-aria="go_top" aria-label="Scroll to top">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
