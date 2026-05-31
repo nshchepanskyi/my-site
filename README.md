@@ -1,4 +1,4 @@
-# Lumina - Booking Website (Beginner Version)
+# Lumina - Booking Website 
 
 A simple, clean booking website built with basic HTML, CSS, and JavaScript.
 
